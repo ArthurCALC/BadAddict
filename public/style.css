@@ -1,0 +1,111 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+/* Carousel background */
+.background-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Foreground site content */
+.main-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Docked logo */
+.side-logo {
+  position: fixed;
+  left: 5%;
+  top: 4%;
+  z-index: 1000;
+  height: 50px;
+}
+.side-logo img{
+    height: 50px;
+}
+/* Floating nav bar */
+.floating-nav {
+  position: fixed;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  padding: 14px 32px;
+  border-radius: 12px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.nav-icons a {
+  margin-left: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.nav-icons a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-icons svg {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+}
+
+.nav-icons a:hover svg {
+  stroke: #333;
+}
+
+/* Background section */
+.hero video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}

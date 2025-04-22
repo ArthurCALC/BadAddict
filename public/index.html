@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadAddict</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Docked vertical logo on left -->
+    <div class="side-logo">
+        <img src="Photos/logo.png" alt="Logo" />
+    </div>
+    <!-- Background Carousel -->
+    <div class="background-carousel">
+        <div class="carousel-slide active" style="background-image: url('Photos/astrox88_sd_key_visual_2880x1120__jpg.webp')"></div>
+        <div class="carousel-slide" style="background-image: url('Photos/a12f594546f115765ebecab48f66e167.png')"></div>
+        <div class="carousel-slide" style="background-image: url('Photos/b58afba9170c6b974746523a6183759a.png')"></div>
+        <div class="carousel-slide" style="background-image: url('Photos/ea24af6f5344ee5eb38db4a43487d842.png')"></div>
+    </div>
+  <!-- Floating nav bar -->
+    <header class="floating-nav">
+        <nav class="nav-inner">
+            <div class="nav-links">
+                <a href="#">Shop</a>
+                <a href="#">Activities</a>
+                <a href="#">Explore</a>
+            </div>
+            <div class="nav-icons">
+                <!-- Search icon -->
+                <a href="#" title="Search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </a>
+
+                <!-- Cart icon -->
+                <a href="#" title="Cart">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v13a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                  </svg>
+                </a>
+
+                <!-- User icon -->
+                <a href="#" title="Account">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+  <!-- Simulated background hero section -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="background.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <script>
+        const slides = document.querySelectorAll(".carousel-slide");
+        let current = 0;
+
+        setInterval(() => {
+          slides[current].classList.remove("active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("active");
+        }, 5000); // 5 seconds per slide
+    </script>
+
+</body>
+</html>
